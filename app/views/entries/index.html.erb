@@ -1,1 +1,8 @@
 <h1>This is the entries index page</h1>
+<%= link_to("Single entry", "/entries/show") %>
+
+<% @entries.each do |entry| %> 
+	<%= render 'single_entry', word_entry: entry %> 
+	
+<% end %> 
+
