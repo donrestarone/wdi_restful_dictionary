@@ -22,9 +22,9 @@ class EntriesController < ApplicationController
 		@entry.language = params[:entry][:langauge]
  
 		if @entry.save
-			redirect_to entries_url
+			redirect_to entries_path
 		else 
-			redirect_to entries_url
+			render :new
 		end 
 	end 
 
