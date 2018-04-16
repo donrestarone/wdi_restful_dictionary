@@ -49,7 +49,7 @@ class EntriesController < ApplicationController
 
 	def destroy
 		@entry = Entry.find(params[:id])
-		@location.destroy
+		@entry.destroy
 		redirect_to entries_url
 	end 
 end

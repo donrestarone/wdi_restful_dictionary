@@ -1,3 +1,4 @@
 <h1>edit entry</h1>
 <%= link_to @entry.word, edit_entry_path(@entry) %> 
 <%= render 'new_entry_form', word_entry: @entry %> 
+<p><%= link_to 'delete', entry_path(@entry), method: :delete %> </p>
