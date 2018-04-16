@@ -41,9 +41,9 @@ class EntriesController < ApplicationController
 		@entry.language = params[:entry][:language]
 
 		if @entry.save
-			redirect_to entry_url(params[:id])
+			redirect_to entry_path(params[:id])
 		else 
-			redirect_to entry_url(params[:id])
+			render :index
 		end 
 	end	 
 
